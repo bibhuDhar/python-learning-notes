@@ -277,3 +277,8 @@ Example → name_setter("Samsung")
 
 Encapsulation in Action:
 We protect sensitive information (like IMEI) from being changed or leaked.
+
+
+# Abstraction
+related to designing part,our complex methods are hide and to operate we will provide function/method
+In camera if we capture photo
