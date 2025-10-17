@@ -202,3 +202,78 @@ Photo is captured by Dslr
 
 ```
 
+# Encapsulation
+
+### Definition
+Encapsulation means wrapping data (variables) and methods (functions) into a single unit (a class), and restricting direct access to some of the object’s components.
+It helps to protect sensitive data and ensures that it is accessed or modified only through specific methods.
+
+Word Breakdown
+“Capsulate” → to enclose or wrap.
+“Encapsulation” → enclosing data and methods together in one place (a class).
+📦 In short: Our data and methods are encapsulated (contained) inside a class.
+### Why Use Encapsulation?
+✅ To protect data from direct modification.
+✅ To control access to class variables using getter/setter methods.
+✅ To hide internal details and expose only what’s necessary.
+✅ To increase security and maintain consistency in code.
+
+
+```
+# Encapsulation
+class Mobile:
+  def __init__(self, name, model, imei):
+    self.__name = name
+    self.__model = model
+    self.__imei = imei  # Protected by double underscore (__)
+
+  def charge(self):
+    print("Phone is charging")
+
+  # Getter methods (to read private data)
+  def imei_getter(self):
+    return self.__imei
+
+  def model_getter(self):
+    return self.__model
+
+  def name_getter(self):
+    return self.__name
+
+  # Setter method (to modify private data safely)
+  def name_setter(self, name):
+    self.__name = name
+
+
+# Creating object
+Iphone = Mobile("iPhone", "17", "1x32jd")
+
+# Using setter to modify name safely
+Iphone.name_setter("Samsung")
+
+# Using getters to access private data
+print(Iphone.name_getter())
+print(Iphone.model_getter())
+print(Iphone.imei_getter())
+
+```
+
+### Code Breakdown
+
+Private Attributes:
+__name, __model, and __imei are private variables.
+They cannot be accessed directly (e.g., Iphone.__imei would cause an error).
+
+Double Underscore (__):
+Used before variable names to make them private and inaccessible outside the class.
+
+Getter Methods:
+Used to retrieve the value of private attributes safely.
+Example → imei_getter() or model_getter()
+
+Setter Methods:
+Used to update the value of private attributes safely.
+Example → name_setter("Samsung")
+
+Encapsulation in Action:
+We protect sensitive information (like IMEI) from being changed or leaked.
