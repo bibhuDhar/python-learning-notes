@@ -113,7 +113,7 @@ except Exception as reason:
 ```
 By using the Exception keyword we can handle all the exception cases whether we don't know the exception case
 
-#Understanding try-except-else-finally in Python File Handling
+# Understanding try-except-else-finally in Python File Handling
 ``` 
 try:
   file= open("./sample_data/data1.txt","r")
