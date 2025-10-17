@@ -1,18 +1,18 @@
-#Read the contents of a file
+# Read the contents of a file
 ```
 with open("./sample_data/sample.txt", "r") as file:
     string = file.read()
     print(string)
 
 ```
-#Read lines into a list
+# Read lines into a list
 ```
 with open("./sample_data/sample.txt", "r") as file:
     string = file.readlines()
     print(string)
 
 ```
-#Print the number of lines
+# Print the number of lines
 ```
 with open("./sample_data/sample.txt") as file:
     string = file.readlines()
@@ -21,7 +21,7 @@ with open("./sample_data/sample.txt") as file:
 
 ```
 
-#Count the total number of words
+# Count the total number of words
 ```
 from functools import reduce
 
@@ -33,13 +33,13 @@ with open("./sample_data/sample.txt", "r") as file:
     print(total_num_word)
 
 ```
-#Count the total number of characters (without spaces)
+# Count the total number of characters (without spaces)
 ```
 string = " Hello world "
 print(string.strip())  # Output: Hello world
 
 ```
-#Full Program:
+# Full Program:
 ```
 from functools import reduce
 
@@ -76,7 +76,7 @@ with open("./sample_data/write_read.txt", "w+") as file:
 
 ```
 
-#Exception
+# Exception
 It is an error that occurs on run time
 to solve this problem we use exception handling
 
@@ -93,7 +93,7 @@ except ZeroDivisionError:
 ```
 here after taking input when we try to divide 10 by 0 the exception case except block handle the problem
 
-#Handling Name error
+# Handling Name error
 ``` 
 try:
   x = y
@@ -103,7 +103,7 @@ except NameError as reason:
 Python first runs the code inside the try block.,But — y is not defined anywhere.
 That means Python doesn’t know what y is.The except part catches that specific kind of error (NameError).as reason stores the error message inside the variable reason.This prints the error message that Python generated.
 
-#Solving all exception with only Exception keyword
+# Solving all exception with only Exception keyword
 
 ``` 
 try:
