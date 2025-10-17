@@ -119,19 +119,86 @@ Charging for 2 hours
 
 
 # Polymorphism
-Polymorphism = poly + morph + ism
+Definition
 
-poly- → “many”
+Polymorphism means “many forms.”
+It allows objects of different classes to respond to the same method name in different ways.
 
-From Greek polys, meaning many or multiple.
+👉 The term comes from:
 
--morph- → “form” or “shape”
+poly → many
 
-From Greek morphe, meaning shape or form.
+morph → forms
 
--ism → “the concept or practice of”
+In programming, this means you can call the same method (like capture()) on different objects, and each will perform its own version of that method.
 
-Common suffix meaning a principle, practice, or phenomenon.
+Real-Life Analogy (as from DataCamp example)
 
-✅ Putting it together:
-Polymorphism literally means “the concept of many forms”
+Think about various devices that can take photos —
+📱 Smartphone, 🚁 Drone, 📷 DSLR, or even a basic Camera.
+
+All have the same capability — they can capture photos,
+but the way or quality of capturing is different for each.
+
+That’s exactly what polymorphism represents in code.
+
+```
+class Camera:
+    def __init__(self, name):
+        self.name = name
+    def capture(self):
+        print("A photo is captured")
+
+class Smartphone(Camera):
+    def __init__(self, name, resolution):
+        super().__init__(name)
+        self.resolution = resolution
+    def capture(self):
+        print("Photo is captured by Phone")
+
+class Drone(Camera):
+    def __init__(self, name, resolution):
+        super().__init__(name)
+        self.resolution = resolution
+    def capture(self):
+        print("Photo is captured by Drone")
+
+class Dslr(Camera):
+    def __init__(self, name, resolution):
+        super().__init__(name)
+        self.resolution = resolution
+    def capture(self):
+        print("Photo is captured by Dslr")
+
+# Creating objects
+phone = Smartphone("iPhone", 30)
+drone = Drone("Panther", 300)
+dslr = Dslr("Canon", 200)
+
+# Calling the same method 'capture()' for each
+phone.capture()
+drone.capture()
+dslr.capture()
+
+```
+
+Breakdown of the Concept
+
+Parent Class – Camera:
+Has a common method capture() representing the general idea of taking a photo.
+
+Child Classes – Smartphone, Drone, Dslr:
+Each subclass overrides the capture() method to perform it differently.
+
+Common Interface, Different Behavior:
+Even though all objects have the same method name (capture()),
+the output differs based on the object that calls it.
+
+### Output
+```
+Photo is captured by Phone
+Photo is captured by Drone
+Photo is captured by Dslr
+
+```
+
