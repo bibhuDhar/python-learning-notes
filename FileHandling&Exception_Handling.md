@@ -1,6 +1,6 @@
-# with open("./sample_data/sample.txt","r") as file:
+# ``` with open("./sample_data/sample.txt","r") as file:
   string = file.read();
-  print(string)
+  print(string)```
 
 This is read function which read the lines of sample.txt file and after printing it will show all the lines,suppose input is:
 
@@ -12,9 +12,9 @@ Good luck with your Python journey
 
 after reading it will just print the lines as it is,
 
-## with open("./sample_data/sample.txt","r") as file:
+## ```with open("./sample_data/sample.txt","r") as file:
   string = file.readlines();
-  print(string)
+  print(string)```
 
   readlines function just move the lines in a list and print them with \n
 
@@ -22,10 +22,11 @@ after reading it will just print the lines as it is,
 
 
 ##print the number of line-
-with open("./sample_data/sample.txt") as file:
+
+```with open("./sample_data/sample.txt") as file:
   string = file.readlines()
   total_line = len(string)
-  print(total_line)
+  print(total_line)```
 
   here it is printing the line number 5 because in the list it have stored five items 
 
@@ -33,13 +34,13 @@ with open("./sample_data/sample.txt") as file:
 
 
 ## Count the number of words
-from functools import reduce
+```from functools import reduce
 with open("./sample_data/sample.txt","r") as file:
   string = file.readlines()
   total_line = len(string)
   number_of_words = list(map(lambda x: len(x.split()),string))
   total_num_word = reduce(lambda x,y: x+y,number_of_words)
-  print(total_num_word)
+  print(total_num_word)```
   
 
 In string variable the file is stored as list 
@@ -51,7 +52,7 @@ str.strip() is used to remove the leading and trailling space from a string
 suppose string = " Hello world "
 print(string.strip()) : output = Hello world
 
-from functools import reduce
+```from functools import reduce
 with open("./sample_data/sample.txt","r") as file:
   string = file.readlines()
   string_list = list(map(str.strip,string))
@@ -60,7 +61,7 @@ with open("./sample_data/sample.txt","r") as file:
   number_char = list(map(lambda x: len(x),string_list))
   print(number_char)
   total_num = reduce(lambda x,y: x+y,number_char)
-  print(total_num)
+  print(total_num)```
 
   Steps->
   1. use readlines() to make the lines item of list
@@ -71,7 +72,7 @@ with open("./sample_data/sample.txt","r") as file:
 
 ## There is a mode called w+,which can do read and write both.
 
-with open("./sample_data/write_read.txt","w+") as file:
+```with open("./sample_data/write_read.txt","w+") as file:
   file.write("Hello World")
   print(file.tell()) #file.tell() is indicating where the cursor is reading
   file.seek(0) #Moves the file pointer (cursor) to a specific position.
@@ -80,4 +81,4 @@ with open("./sample_data/write_read.txt","w+") as file:
   file.seek(0)
   print(file.tell())
   file.truncate(5)
-  print(file.read())
+  print(file.read())```
