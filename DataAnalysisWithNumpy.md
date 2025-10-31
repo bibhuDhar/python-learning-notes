@@ -1,3 +1,20 @@
+=== NumPy arange() ===
+```
+import numpy as np
+
+# Create an array using arange()
+arr = np.arange(0, 10, 2)
+print(arr)
+
+```
+🧠 Explanation:
+np.arange(start, stop, step) generates numbers starting from start
+and ending before stop, with a difference of step between numbers.
+In this example:
+start = 0
+stop = 10 → (excluded)
+step = 2
+So it creates numbers: 0, 2, 4, 6, 8
 === Array Filled with 7 ===
 ```
 import numpy as np
