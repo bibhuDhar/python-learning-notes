@@ -1,3 +1,12 @@
+=== Array Filled with 7 ===
+```
+import numpy as np
+
+# Create an array filled with 7 of shape (3,3)
+arr_filled = np.full((3,3), 7)
+print(arr_filled)
+
+```
 === Zeros Array ===
 ```
 import numpy as np
