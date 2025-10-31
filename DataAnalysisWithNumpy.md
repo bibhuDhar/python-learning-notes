@@ -1,3 +1,12 @@
+=== Zeros Array ===
+```
+import numpy as np
+
+# Create an array of zeros with shape (3,3)
+zeros_arr = np.zeros((3,3))
+print(zeros_arr)
+
+```
 === Shape and Dimensions ===
 
 Gives the number of rows and columns of an array.
